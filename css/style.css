@@ -1,0 +1,105 @@
+:root{
+  --bg:#faf8f6;
+  --card:#fff;
+  --accent:#b56576; /* rosy accent */
+  --muted:#7b6f75;
+  --glass: rgba(255,255,255,0.6);
+  --shadow: 0 8px 24px rgba(20,20,20,0.08);
+  --radius:16px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#fff 0%, #fbf7f8 100%);
+  color:#333;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* Page layout */
+.page{max-width:1000px;margin:28px auto;padding:20px}
+.hero{
+  position:relative;
+  border-radius:20px;
+  padding:48px;
+  background:linear-gradient(135deg, rgba(181,101,118,0.07), rgba(245,238,241,0.2));
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.title{
+  font-family: "Playfair Display", serif;
+  font-size:36px;
+  margin:0 0 8px;
+  color:#2b2b2b;
+  letter-spacing:0.2px;
+}
+.subtitle{margin:0 0 16px;color:var(--muted);font-weight:500}
+.meta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:10px 18px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:600;
+  box-shadow:0 6px 16px rgba(181,101,118,0.15);
+}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(181,101,118,0.12)}
+.btn:active{transform:translateY(1px)}
+
+/* hearts */
+.hearts{position:absolute;right:18px;top:14px;opacity:0.9}
+.heart{display:inline-block;font-size:20px;color:var(--accent);opacity:0.8;animation:float 4s ease-in-out infinite}
+.h1{animation-delay:0s}
+.h2{animation-delay:0.6s;transform:scale(0.95)}
+.h3{animation-delay:1.2s;transform:scale(0.9)}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+
+/* content */
+.card{background:var(--card);border-radius:var(--radius);padding:22px;margin:20px 0;box-shadow:var(--shadow)}
+.section h2{font-family:"Playfair Display",serif;margin:0 0 8px}
+.lead{color:var(--muted);font-weight:500}
+.story-grid{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:center}
+.story-media img{width:100%;height:auto;border-radius:12px;object-fit:cover;box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+
+/* gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:14px}
+.gallery-item{background:transparent;border:0;padding:0;border-radius:12px;overflow:hidden;cursor:pointer}
+.gallery-item img{width:100%;height:140px;object-fit:cover;display:block;transition:transform .25s}
+.gallery-item:hover img{transform:scale(1.03)}
+
+/* video grid */
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+video{width:100%;height:220px;border-radius:12px;object-fit:cover;background:#000;box-shadow:0 12px 30px rgba(0,0,0,0.08)}
+
+/* love letter */
+.love-section .letter{font-family:Inter;font-size:16px;color:#2b2b2b;padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(181,101,118,0.03), rgba(255,255,255,0));border:1px solid rgba(181,101,118,0.05)}
+.letter p{margin:0 0 12px}
+.letter .from{font-weight:600;color:var(--accent);margin-top:8px}
+
+/* footer */
+.footer{text-align:center;color:var(--muted);margin:18px 0 40px;font-size:14px}
+
+/* lightbox */
+.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(8,6,8,0.72);z-index:3000;padding:28px}
+.lightbox img{max-width:94%;max-height:86%;border-radius:10px;box-shadow:0 12px 40px rgba(0,0,0,0.6)}
+.lb-close{position:fixed;top:20px;right:20px;border:0;background:transparent;color:#fff;font-size:22px;padding:8px;cursor:pointer}
+.lb-nav{position:fixed;top:50%;transform:translateY(-50%);color:#fff;font-size:42px;padding:10px;cursor:pointer;user-select:none}
+.lb-nav:hover{opacity:0.85}
+#lbPrev{left:20px}#lbNext{right:20px}
+
+/* responsive */
+@media (max-width:880px){
+  .story-grid{grid-template-columns:1fr}
+  .hero{padding:30px}
+  .title{font-size:28px}
+}
