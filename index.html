@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>1 Year With You — Happy Anniversary</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <h1 class="title">One Year With You</h1>
+        <p class="subtitle">To my love — every day with you is my favourite day.</p>
+        <div class="meta">
+          <button id="openLove" class="btn">Open My Letter</button>
+          <a href="#gallery" class="btn ghost">See Photos</a>
+        </div>
+      </div>
+
+      <!-- little animated hearts -->
+      <div class="hearts" aria-hidden="true">
+        <span class="heart h1">♡</span>
+        <span class="heart h2">♡</span>
+        <span class="heart h3">♡</span>
+      </div>
+    </header>
+
+    <main>
+      <section id="our-story" class="card section">
+        <h2>Our Story</h2>
+        <p class="lead">
+          Remember the first time we talked for hours? When you laugh I forget the rest of the world.
+          This past year has been full of little miracles — stolen smiles, late-night conversations, and quiet mornings.
+        </p>
+        <div class="story-grid">
+          <div class="story-text">
+            <h3>Milestones</h3>
+            <ul>
+              <li>First call — we stayed up too late</li>
+              <li>First visit — the best hug</li>
+              <li>One year later — still head over heels</li>
+            </ul>
+          </div>
+
+          <div class="story-media">
+            <!-- Example image paths (replace or keep) -->
+            <img src="assets/criminals.jpeg" alt="us smiling" />
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="card section">
+        <h2>Photo Gallery</h2>
+        <p class="muted">Click any photo to view larger.</p>
+
+        <div class="gallery-grid">
+          <!-- Use your own filenames (placed inside assets/) -->
+          <button class="gallery-item" data-src="assets/posing.jpeg" aria-label="Open photo 1">
+            <img src="assets/posing.jpeg" alt="Photo 1">
+          </button>
+
+          <button class="gallery-item" data-src="assets/peace.jpeg" aria-label="Open photo 2">
+            <img src="assets/peace.jpeg" alt="Photo 2">
+          </button>
+
+          <!-- placeholders for more photos -->
+          <button class="gallery-item" data-src="assets/pimple.jpeg" aria-label="Open photo 3">
+            <img src="assets/pimple.jpeg" alt="Photo 3">
+          </button>
+
+          <button class="gallery-item" data-src="assets/smiling.jpeg" aria-label="Open photo 4">
+            <img src="assets/smiling.jpeg" alt="Photo 4">
+          </button>
+        </div>
+      </section>
+
+      <section id="videos" class="card section">
+        <h2>Video Memories</h2>
+        <p class="muted">Drop your videos into the <code>assets/</code> folder and update the filenames below.</p>
+
+        <div class="video-grid">
+          <!-- Replace video sources with your real files (mp4/webm) -->
+          <video controls src="assets/hair.mov" poster="assets/hair-poster.jpg">Your browser does not support the video tag.</video>
+          <video controls src="assets/ion.mov" poster="assets/ion-poster.jpg">Your browser does not support the video tag.</video>
+          <video controls src="assets/who.mov" poster="assets/who-poster.jpg"</video>
+        </div>
+      </section>
+
+      <section id="love-letter" class="card love-section">
+        <h2>My Love Letter</h2>
+        <div class="letter">
+          <p>My love,</p>
+          <p>One year with you has taught me how gentle a heart can be. You make the ordinary feel extraordinary. I love how your laugh fills the room and how every small moment with you feels like a secret we keep to ourselves.</p>
+          <p>Thank you for being my home. Here's to forever + one more year. ❤️</p>
+          <p class="from">— Yours always</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Made with ❤️ for our 1 year anniversary</p>
+    </footer>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <button id="lbClose" class="lb-close" aria-label="Close">✕</button>
+    <img id="lbImage" src="" alt="Expanded photo">
+    <a id="lbPrev" class="lb-nav" aria-label="Previous photo">‹</a>
+    <a id="lbNext" class="lb-nav" aria-label="Next photo">›</a>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
